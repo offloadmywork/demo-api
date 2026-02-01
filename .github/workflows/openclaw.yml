@@ -38,3 +38,5 @@ jobs:
           provider: 'openrouter'
           model: 'z-ai/glm-4.5-air:free'
           github_token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
