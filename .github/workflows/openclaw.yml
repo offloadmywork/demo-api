@@ -36,5 +36,5 @@ jobs:
         with:
           api_key: ${{ secrets.OPENROUTER_API_KEY }}
           provider: 'openrouter'
-          model: 'moonshotai/kimi-k2:free'
+          model: 'z-ai/glm-4.5-air:free'
           github_token: ${{ secrets.GITHUB_TOKEN }}
