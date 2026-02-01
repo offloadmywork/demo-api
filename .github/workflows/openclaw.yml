@@ -29,6 +29,9 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - uses: offloadmywork/openclaw-github-app@main
         with:
           api_key: ${{ secrets.XAI_API_KEY }}
