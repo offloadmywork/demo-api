@@ -10,13 +10,12 @@ router.get('/', (req, res) => {
 });
 
 // POST /tasks - Create a new task
-// Bug: should return 201, not 200
-// Bug: no input validation
+// TODO: Add input validation
 router.post('/', (req, res) => {
   const { title, description } = req.body;
   
   const task = db.createTask(title, description);
-  res.status(200).json(task); // Should be 201!
+  res.status(201).json(task);
 });
 
 // GET /tasks/:id - Get a specific task
