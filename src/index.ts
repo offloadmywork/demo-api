@@ -11,6 +11,14 @@ app.use(express.json());
 app.use('/tasks', tasksRouter);
 
 // Health check
+app.get('/health', (req, res) => {
+  res.json({ 
+    status: 'ok',
+    uptime: process.uptime()
+  });
+});
+
+// Root endpoint
 app.get('/', (req, res) => {
   res.json({ 
     status: 'ok', 
