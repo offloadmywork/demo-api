@@ -29,7 +29,24 @@ router.get('/:id', (req, res) => {
   res.json(task);
 });
 
-// TODO: PUT /tasks/:id - Update a task (missing!)
+// PUT /tasks/:id - Update a task
+router.put('/:id', (req, res) => {
+  const { title, description, completed } = req.body;
+  
+  const updates: any = {};
+  if (title !== undefined) updates.title = title;
+  if (description !== undefined) updates.description = description;
+  if (completed !== undefined) updates.completed = completed;
+  
+  const task = db.updateTask(req.params.id, updates);
+  
+  if (!task) {
+    return res.status(404).json({ error: 'Task not found' });
+  }
+  
+  res.json(task);
+});
+
 // TODO: DELETE /tasks/:id - Delete a task (missing!)
 
 export default router;
