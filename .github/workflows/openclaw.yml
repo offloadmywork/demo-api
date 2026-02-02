@@ -19,7 +19,7 @@ on:
         default: 'Manual trigger - review the repo'
 
 permissions:
-  contents: read
+  contents: write
   issues: write
   pull-requests: write
 
