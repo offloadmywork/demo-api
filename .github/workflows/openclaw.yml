@@ -9,6 +9,8 @@ on:
     types: [opened, synchronize, reopened]
   pull_request_review_comment:
     types: [created]
+  schedule:
+    - cron: '*/5 * * * *'  # every 5 minutes for testing
   workflow_dispatch:
     inputs:
       message:
