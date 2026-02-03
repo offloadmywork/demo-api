@@ -9,8 +9,6 @@ on:
     types: [opened, synchronize, reopened]
   pull_request_review_comment:
     types: [created]
-  schedule:
-    - cron: '0 */6 * * *'
   workflow_dispatch:
     inputs:
       message:
@@ -34,9 +32,9 @@ jobs:
           node-version: '22'
       - uses: offloadmywork/openclaw-github-app@main
         with:
-          api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          provider: 'anthropic'
-          model: 'claude-sonnet-4-5'
+          api_key: ${{ secrets.OPENROUTER_API_KEY }}
+          provider: 'openrouter'
+          model: 'z-ai/glm-4.5-air:free'
           github_token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
