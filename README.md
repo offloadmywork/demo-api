@@ -22,3 +22,5 @@ The server will start on port 3000.
 ## Project Status
 
 This is an MVP with basic CRUD operations. Some endpoints are still missing (PUT, DELETE). The AI maintainer will help identify gaps and improvements.
+
+<!-- Test PR trigger: Wed Feb  4 09:50:46 IST 2026 -->
