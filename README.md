@@ -22,3 +22,5 @@ The server will start on port 3000.
 ## Project Status
 
 This is an MVP with basic CRUD operations. Some endpoints are still missing (PUT, DELETE). The AI maintainer will help identify gaps and improvements.
+
+<!-- Test comment: validating OpenClaw bot PR review trigger -->
