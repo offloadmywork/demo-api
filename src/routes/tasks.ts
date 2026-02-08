@@ -10,11 +10,15 @@ router.get('/', (req, res) => {
 });
 
 // POST /tasks - Create a new task
-// TODO: Add input validation
 router.post('/', (req, res) => {
   const { title, description } = req.body;
   
-  const task = db.createTask(title, description);
+  // Basic input validation
+  if (!title || typeof title !== 'string' || title.trim() === '') {
+    return res.status(400).json({ error: 'Title is required and must be a non-empty string' });
+  }
+  
+  const task = db.createTask(title.trim(), description);
   res.status(201).json(task);
 });
 
@@ -47,6 +51,15 @@ router.put('/:id', (req, res) => {
   res.json(task);
 });
 
-// TODO: DELETE /tasks/:id - Delete a task (missing!)
+// DELETE /tasks/:id - Delete a task
+router.delete('/:id', (req, res) => {
+  const deleted = db.deleteTask(req.params.id);
+  
+  if (!deleted) {
+    return res.status(404).json({ error: 'Task not found' });
+  }
+  
+  res.status(204).send();
+});
 
 export default router;

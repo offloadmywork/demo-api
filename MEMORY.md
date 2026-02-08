@@ -8,7 +8,11 @@ Project status and decisions are tracked here by the AI assistant.
 - Current state: MVP with basic CRUD operations
 
 ## Recent Activity
-- 2026-02-07: Heartbeat check performed, repository reviewed, 11 open issues and 1 open PR identified
+- 2026-02-08: Heartbeat check performed, repository reviewed and improved
+  - Implemented missing DELETE /tasks/:id endpoint
+  - Added input validation for POST /tasks endpoint
+  - Updated memory with findings
+- 2026-02-07: Previous heartbeat check, repository reviewed, 11 open issues and 1 open PR identified
 - Issues span multiple categories: API improvements, OpenClaw App features, Email Worker security enhancements, GitHub App preparation
 - PR #9 adds request logging middleware to improve API observability
 
