@@ -7,6 +7,14 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(express.json());
 
+// Simple request logging middleware
+const requestLogger = (req: any, res: any, next: any) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}`);
+  next();
+};
+
+app.use(requestLogger);
+
 // Routes
 app.use('/tasks', tasksRouter);
 
