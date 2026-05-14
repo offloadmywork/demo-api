@@ -8,13 +8,14 @@ Project status and decisions are tracked here by the AI assistant.
 - Current state: MVP with basic CRUD operations
 
 ## Recent Activity
-- 2026-05-03: Heartbeat check performed, repository reviewed, no new issues identified since previous check
+- 2026-05-14: Heartbeat check performed, repository reviewed, no new issues identified since previous check
   - API implementation appears stable with full CRUD operations implemented
   - TypeScript compilation successful
   - Dependencies up to date with one non-critical security vulnerability
   - CI runs passing on 6-hour schedule
   - No active PRs in progress
   - All endpoints working as expected
+  - Latest commit: 1f07a26 Revert invalid ignoreDeprecations option from tsconfig.json
 - 2026-02-14: Heartbeat check performed, repository reviewed, 10 open issues and 1 open PR identified
   - Issues span API improvements, OpenClaw App features, Email Worker security, and GitHub App tasks
   - PR #9 adds request logging middleware to improve API observability
@@ -38,7 +39,8 @@ Project status and decisions are tracked here by the AI assistant.
 - #28: OpenClaw App: Run 1-week dogfood plan
 - #24: OpenClaw App: Install & verify webhook delivery
 - #23: Email Worker: Quarantine system for suspicious emails
-- #9: Add request logging middleware (open PR)
+- All CRUD operations now implemented (GET, POST, PUT, DELETE)
+- Request logging middleware added in recent PR (merged)
 
 ## Tech Stack
 - Express.js for REST API
